@@ -1,7 +1,6 @@
 from collections import deque
 
-class Solution(object):
-    # Returns the length of the longest substring with unique characters.
+class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         substr = deque()
         length = len(s)
