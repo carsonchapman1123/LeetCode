@@ -1,6 +1,6 @@
 from typing import List
 
-class Solution(object):
+class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
         result = []
         if n == 0:

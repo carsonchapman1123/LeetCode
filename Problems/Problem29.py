@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
         count = 0
         negative = False
