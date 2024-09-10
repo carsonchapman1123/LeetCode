@@ -1,19 +1,13 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        negative = False
-        if x < 0:
-            negative = True
-            x *= -1
-        maxInt = (2**31 - 1) / 10
+        sign = -1 if x < 0 else 1
+        x = abs(x)
         rev = 0
         while x != 0:
-            pop = x % 10
-            x //= 10
-            if rev > maxInt or (rev == maxInt and pop > 7):
+            rev = rev * 10 + x % 10
+            if rev > 2**31 - 1:
                 return 0
-            rev = rev * 10 + pop
-        if negative:
-            return -1 * rev
-        return rev
+            x //= 10
+        return sign * rev
 
 print(Solution().reverse(-123))

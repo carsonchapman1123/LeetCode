@@ -1,9 +1,11 @@
-class Solution(object):
-    def findLeftIndex(self, nums, target):
+from typing import List
+
+class Solution:
+    def findLeftIndex(self, nums: List[int], target: int) -> int:
         l = 0
         r = len(nums) - 1
         while l <= r:
-            mid = (l + r) / 2
+            mid = (l + r) // 2
             current = nums[mid]
             if current < target:
                 l = mid + 1
@@ -18,11 +20,11 @@ class Solution(object):
                     r = mid - 1
         return -1
 
-    def findRightIndex(self, nums, target):
+    def findRightIndex(self, nums: List[int], target: int) -> int:
         l = 0
         r = len(nums) - 1
         while l <= r:
-            mid = (l + r) / 2
+            mid = (l + r) // 2
             current = nums[mid]
             if current < target:
                 l = mid + 1
@@ -36,7 +38,7 @@ class Solution(object):
                 else:
                     l = mid + 1
 
-    def searchRange(self, nums, target):
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
         leftIndex = self.findLeftIndex(nums, target)
         if leftIndex == -1:
             return [-1, -1]
@@ -47,4 +49,4 @@ class Solution(object):
 
 testList = [1, 2, 2]
 testTarg = 2
-print Solution().searchRange(testList, testTarg)
+print(Solution().searchRange(testList, testTarg))

@@ -1,22 +1,16 @@
-class Solution(object):
-    def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
-        if len(strs) == 0:
-            return ""
-        if len(strs) == 1:
-            return strs[0]
+from typing import List
+
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        ret = ""
+        strs = sorted(strs)
         first = strs[0]
-        returnStr = ""
-        for i in range(len(first)):
-            for j in range(1,len(strs)):
-                if i == len(strs[j]) or strs[j][i] != first[i]:
-                    return returnStr
-            returnStr += first[i]
-        return returnStr
+        last = strs[-1]
+        for i in range(min(len(first), len(last))):
+            if first[i] != last[i]:
+                return ret
+            ret += first[i]
+        return ret
 
-
-test = ["aa", "a"]
-print Solution().longestCommonPrefix(test)
+test = ["flow", "flight"]
+print(Solution().longestCommonPrefix(test))

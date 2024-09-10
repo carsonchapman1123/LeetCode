@@ -1,9 +1,7 @@
-class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> List[int]:
         n = len(nums)
         if n <= 1:
             return n
@@ -15,9 +13,8 @@ class Solution(object):
                 currentLength -= 1
             else:
                 i += 1
-        print list(set(nums))
         return currentLength
 
 
 test = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
-print Solution().removeDuplicates(test)
+print(Solution().removeDuplicates(test))

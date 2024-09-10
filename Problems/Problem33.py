@@ -1,5 +1,7 @@
-class Solution(object):
-    def search(self, nums, target):
+from typing import List
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
         length = len(nums)
         if length == 0:
             return -1
@@ -17,7 +19,6 @@ class Solution(object):
             r = length - 1
             while l <= r:
                 m = (l + r) / 2
-                print m
                 if nums[m] == target:
                     return m
                 if nums[m] > nums[m+1]:
@@ -36,7 +37,6 @@ class Solution(object):
         else:
             l = 0
             r = pivot - 1
-        print l, r
         while l <= r:
             m = (l + r) / 2
             if nums[m] == target:
@@ -48,10 +48,6 @@ class Solution(object):
         return -1
 
 
-
-
-
-
 testNums = [3,4,1,2]
 testTarget = 2
-print Solution().search(testNums, testTarget)
+print(Solution().search(testNums, testTarget))

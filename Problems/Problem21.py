@@ -1,24 +1,10 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 30 13:44:20 2018
-
-@author: macuser
-"""
-
-# Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
-class Solution(object):
-    def mergeTwoLists(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(0)
         curr = dummy
         while l1 and l2:

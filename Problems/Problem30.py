@@ -1,20 +1,7 @@
-class Solution(object):
-    def wordCombinations(self, words):
-        returnList = [""]
-        for i in range(len(words)):
-            temp = []
-            for s in returnList:
-                for w in words:
-                    temp.append(s + w)
-            returnList = temp
-        return returnList
+from typing import List
 
-    def findSubstring(self, s, words):
-        """
-        :type s: str
-        :type words: List[str]
-        :rtype: List[int]
-        """
+class Solution:
+    def findSubstring(self, s: str, words: List[str]) -> List[str]:
         listLength = len(words)
         if listLength == 0:
             return []
@@ -39,5 +26,5 @@ class Solution(object):
 
 s = "barfoothefoobarman"
 words = ["foo", "bar"]
-#print Solution().findSubstring(s, words)
-print Solution().wordCombinations(words)
+
+print(Solution().findSubstring(s, words))

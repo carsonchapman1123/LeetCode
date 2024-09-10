@@ -1,29 +1,15 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 23 16:11:59 2018
-
-@author: macuser
-"""
-
-# Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
         
     def display(self):
-        while self != None:
-            print self.val
+        while self:
+            print(self.val)
             self = self.next
 
-class Solution(object):
-    def reverseKGroup(self, head, k):
-        """
-        :type head: ListNode
-        :type k: int
-        :rtype: ListNode
-        """
+class Solution:
+    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         stack = []
         count = 0
         ret = head

@@ -1,22 +1,10 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 30 13:11:19 2018
-
-@author: macuser
-"""
-
-class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+class Solution:
+    def isValid(self, s: str) -> bool:
         if len(s) % 2:
             return False
         stack = []
         stackLength = 0
-        closeToOpen = { ")" : "(", "]" : "[", "}" : "{" }
+        closeToOpen = {")" : "(", "]" : "[", "}" : "{"}
         for c in s:
             if c in ["(", "[", "{"]:
                 stack.append(c)
@@ -29,4 +17,4 @@ class Solution(object):
                     return False
         return stack == []
 
-print Solution().isValid("()[]")
+print(Solution().isValid("()[]"))

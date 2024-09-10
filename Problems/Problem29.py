@@ -1,10 +1,5 @@
 class Solution(object):
-    def divide(self, dividend, divisor):
-        """
-        :type dividend: int
-        :type divisor: int
-        :rtype: int
-        """
+    def divide(self, dividend: int, divisor: int) -> int:
         count = 0
         negative = False
         if dividend < 0:
@@ -23,4 +18,4 @@ class Solution(object):
         return count
 
 
-print Solution().divide(1,1)
+print(Solution().divide(1,1))

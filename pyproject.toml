@@ -11,6 +11,9 @@ black = "^24.8.0"
 isort = "^5.13.2"
 ruff = "^0.5.7"
 
+[tool.ruff.lint]
+ignore = ["E741"]
+
 
 [build-system]
 requires = ["poetry-core"]
