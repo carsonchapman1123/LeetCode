@@ -1,10 +1,7 @@
-class Solution(object):
-    def searchInsert(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+from typing import List
+
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
         l = 0
         r = len(nums) - 1
         if target < nums[l]:
@@ -23,4 +20,4 @@ class Solution(object):
 
 
 test = [1,3,5,7]
-print Solution().searchInsert(test, 0)
+print(Solution().searchInsert(test, 0))

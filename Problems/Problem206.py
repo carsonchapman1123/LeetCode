@@ -1,5 +1,5 @@
 # Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -11,12 +11,8 @@ class ListNode(object):
             self = self.next
         return ret + str(self.val) + "]"
 
-class Solution(object):
-    def reverseList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
         if not head:
             return None
         front = head
@@ -33,4 +29,4 @@ for i in range(2,6):
     head.next = ListNode(i)
     head = head.next
 head = dummy
-print Solution().reverseList(head).toStr()
+print(Solution().reverseList(head).toStr())

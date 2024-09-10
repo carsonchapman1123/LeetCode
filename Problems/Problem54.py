@@ -1,9 +1,7 @@
-class Solution(object):
-    def spiralOrder(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: List[int]
-        """
+from typing import List
+
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]):
         height = len(matrix)
         result = []
         if height == 0:
@@ -44,4 +42,4 @@ test = [[1,2,3],
         [8,9,4],
         [7,6,5]]
 
-print Solution().spiralOrder(test)
+print(Solution().spiralOrder(test))

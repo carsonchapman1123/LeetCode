@@ -1,5 +1,7 @@
-class Solution(object):
-    def canJump(self, nums):
+from typing import List
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
         steps_remaining = nums[0]
         for i in range(1, len(nums)):
             steps_remaining -= 1
@@ -10,4 +12,4 @@ class Solution(object):
 
 
 test = [1,1,0,1]
-print Solution().canJump(test)
+print(Solution().canJump(test))

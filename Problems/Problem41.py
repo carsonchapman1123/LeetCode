@@ -1,17 +1,7 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 30 14:14:18 2018
+from typing import List
 
-@author: macuser
-"""
-
-class Solution(object):
-    def firstMissingPositive(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
         l = len(nums)
         dic = {}
         for i in range(1, l + 2):
@@ -23,4 +13,4 @@ class Solution(object):
             if not dic[k]:
                 return k
         
-print Solution().firstMissingPositive([1, 2, 3])
+print(Solution().firstMissingPositive([1, 2, 3]))

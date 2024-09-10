@@ -1,9 +1,7 @@
+from typing import List
+
 class Solution(object):
-    def generateMatrix(self, n):
-        """
-        :type n: int
-        :rtype: List[List[int]]
-        """
+    def generateMatrix(self, n: int) -> List[List[int]]:
         result = []
         if n == 0:
             return result
@@ -39,4 +37,4 @@ class Solution(object):
             current += 1
         return result
 
-print Solution().generateMatrix(4)
+print(Solution().generateMatrix(4))

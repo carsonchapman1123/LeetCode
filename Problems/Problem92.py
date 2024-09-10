@@ -1,5 +1,5 @@
 # Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -11,7 +11,7 @@ class ListNode(object):
             self = self.next
         return ret + str(self.val) + "]"
 
-class Solution(object):
+class Solution:
     def reverseBetween(self, head, m, n):
         dummy = ListNode(0)
         dummy.next = head
@@ -73,4 +73,4 @@ head = dummy
 #'''
 #print head.toStr()
 #print Solution().reverseFirstK(head, 3).toStr()
-print Solution().reverseBetween(head, 2, 4).toStr()
+print(Solution().reverseBetween(head, 2, 4).toStr())

@@ -5,12 +5,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    def partition(self, head, x):
-        """
-        :type head: ListNode
-        :type x: int
-        :rtype: ListNode
-        """
+    def partition(self, head: ListNode, x: int) -> ListNode:
         insertNode = None
         while head.next:
             if head.next.val >= x:

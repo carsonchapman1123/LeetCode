@@ -1,5 +1,5 @@
 import math
-class Solution(object):
+class Solution:
     def climbStairs(self, n):
         s = math.sqrt(5)
         g = (1 + s) / 2
@@ -18,5 +18,5 @@ class Solution(object):
         return b
 
 
-print Solution().climbStairs(4)
-print Solution().fib(6)
+print(Solution().climbStairs(4))
+print(Solution().fib(6))

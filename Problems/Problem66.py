@@ -1,9 +1,7 @@
-class Solution(object):
-    def plusOne(self, digits):
-        """
-        :type digits: List[int]
-        :rtype: List[int]
-        """
+from typing import List
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
         currentIndex = len(digits) - 1
         digits[currentIndex] += 1
         while digits[currentIndex] == 10 and currentIndex > 0:
@@ -16,4 +14,4 @@ class Solution(object):
         return digits
 
 test = [9, 9, 9]
-print Solution().plusOne(test)
+print(Solution().plusOne(test))
